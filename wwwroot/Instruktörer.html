@@ -1,45 +1,114 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instruktörer | GetRunning</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>GetRunning</h1>
-    <nav>
-        <ul>
-            <li><a href="Startsida.html">Start</a></li>
-            <li><a href="Träningspass.html">Träningspass</a></li>
-            <li><a href="Instruktörer.html">Instruktörer</a></li>
-            <li><a href="Provpass.html">Boka provpass</a></li>
-        </ul>
+<header class="navbar">
+    <div class="logo">GetRunning</div>
+
+    <nav class="menu">
+        <a href="Startsida.html">Start</a>
+        <a href="Träningspass.html">Träningspass</a>
+        <a href="Instruktörer.html">Instruktörer</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="Provpass.html" class="btn-primary">Boka provträning</a>
     </nav>
 </header>
 
-<main>
-    <section>
-        <h2>Våra instruktörer</h2>
+<main class="instructors-page">
 
-        <article>
-            <h3>Anna Svensson</h3>
-            <p>Specialist inom styrketräning och nybörjarpass.</p>
-        </article>
+    <h1>Instruktörer</h1>
 
-        <article>
-            <h3>Erik Johansson</h3>
-            <p>Fokus på kondition och löpteknik.</p>
-        </article>
+    <section class="instructors-grid">
+
+        <div class="instructor-card">
+            <img src="https://cdn.discordapp.com/attachments/1326158668806488094/1473296121584680960/Tjej.png?ex=6995b16f&is=69945fef&hm=56e3bab4d495dd372d3b2d5096114a283d75057c4f46472d8285340e54a6f76b&
+              " alt="Anna Palm">
+            <h3>Anna Palm</h3>
+            <p>Zumba & BodyPump</p>
+        </div>
+
+        <div class="instructor-card">
+            <img src="https://cdn.discordapp.com/attachments/1326158668806488094/1473296596195082280/kille.png?ex=6995b1e1&is=69946061&hm=9fcba8dfb16e290a6e41c3c39cf706d68d97c48a76773b5133a91770cb78fadf&
+              " alt="Henrik Larsson">
+            <h3>Henrik Larsson</h3>
+            <p>Step 45 & CardioWalking</p>
+        </div>
+
+        <div class="instructor-card">
+            <img src="https://cdn.discordapp.com/attachments/1326158668806488094/1473296122226278463/tjej2.png?ex=6995b170&is=69945ff0&hm=2f7b94046ecdc231c8e40e298c3787476f62116d540b063e09f8cb1fddbf8436&
+              " alt="Helena Andersson">
+            <h3>Helena Andersson</h3>
+            <p>CrossCage</p>
+        </div>
+
+        <div class="instructor-card">
+            <img src="https://cdn.discordapp.com/attachments/1326158668806488094/1473296123417591858/tjej4.png?ex=6995b170&is=69945ff0&hm=7105eb8ddc0aee7203c2d8190af1aae77fd883fb15fd6cf12b93018f89714bb4&
+              " alt="Emelie Fröding">
+            <h3>Emelie Fröding</h3>
+            <p>CardioWalking</p>
+        </div>
+
+        <div class="instructor-card">
+            <img src="https://cdn.discordapp.com/attachments/1326158668806488094/1473296123979632722/tjej5.png?ex=6995b170&is=69945ff0&hm=f5fdc9dc2dce329e8a48bbeb5419fc008a35d708eeaa80d8dcded2cb80dd6215&
+              " alt="Hanna Ekstedt">
+            <h3>Hanna Ekstedt</h3>
+            <p>Pilates</p>
+        </div>
+
+        <div class="instructor-card">
+            <img src="https://cdn.discordapp.com/attachments/1326158668806488094/1473296122914279517/tjej3.png?ex=6995b170&is=69945ff0&hm=af45f67efe881af64124c82ef0a9f89fc2790486b80f635a9d164d02973069ed&
+              " alt="Frida Karlsson">
+            <h3>Frida Karlsson</h3>
+            <p>BootyBurn</p>
+        </div>
+
     </section>
+
+
+    <!-- CTA SECTION -->
+    <section class="instructor-cta">
+        <div class="cta-text">
+            <h2>GetRunning – Boka med våra instruktörer idag!</h2>
+
+            <p>
+                Våra instruktörer är hjärtat i vårt gym – engagerade, kunniga och alltid
+                redo att peppa dig till ett aktivt liv. Med bred erfarenhet och en äkta passion
+                för träning skapar de energifyllda pass där alla känner sig välkomna,
+                oavsett nivå.
+            </p>
+
+            <p>
+                Tillsammans gör vi träning rolig, inspirerande och full av energi!
+            </p>
+
+            <a href="Provpass.html" class="btn-primary">Boka provträning</a>
+        </div>
+
+        <div class="cta-icon">
+            <img src="https://cdn.discordapp.com/attachments/1326158668806488094/1473305511394017452/background-symbols-1.png?ex=6995ba2e&is=699468ae&hm=0679699098a00f72540b1c2f32f6c721ae8f87b1c850799af6abcb6d0b767478&
+                  " alt="">
+        </div>
+    </section>
+
 </main>
 
-<footer>
+<footer id="kontakt" class="footer">
+    <h3>Kontaktuppgifter</h3>
+    <p>Adress: Göteborgsvägen 1, Göteborg</p>
+    <p>Telefonnummer: 070 123 45 67</p>
+    <p>Mejladress: info@GetRunning.se</p>
+    <br>
     <p>© 2026 GetRunning – Göteborg</p>
 </footer>
 
 </body>
 </html>
+
+

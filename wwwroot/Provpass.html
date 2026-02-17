@@ -2,51 +2,72 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boka provpass | GetRunning</title>
+    <title>Boka provträning | GetRunning</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>GetRunning</h1>
-    <nav>
-        <ul>
-            <li><a href="Startsida.html">Start</a></li>
-            <li><a href="Träningspass.html">Träningspass</a></li>
-            <li><a href="Instruktörer.html">Instruktörer</a></li>
-            <li><a href="Provpass.html">Boka provpass</a></li>
-        </ul>
+<header class="navbar">
+    <div class="logo">GetRunning</div>
+    <nav class="menu">
+        <a href="Startsida.html">Start</a>
+        <a href="Träningspass.html">Träningspass</a>
+        <a href="Instruktörer.html">Instruktörer</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="Provpass.html" class="btn-primary">Boka provträning</a>
     </nav>
 </header>
 
-<main>
-    <section>
-        <h2>Boka gratis provpass</h2>
+<main class="booking-page">
 
-        <form action="/submit" method="post">
-            
-            <label for="namn">Namn:</label>
-            <input type="text" id="namn" name="namn" required>
+    <h1>Boka gratis provträning</h1>
+    <p class="intro-text">
+        Gratis provträning på GetRunning tillsammans med en instruktör
+        eller fri träning i gymmet. Inga förbindelser, testa och känn efter.
+    </p>
 
-            <label for="epost">E-post:</label>
-            <input type="email" id="epost" name="epost" required>
+    <section class="booking-card">
 
-            <label for="pass">Välj pass:</label>
-            <select id="pass" name="pass">
-                <option value="Styrketräning">Styrketräning</option>
-                <option value="Kondition">Kondition</option>
-                <option value="Cirkelträning">Cirkelträning</option>
-            </select>
+        <h2>Intresseanmälan</h2>
+        <p>Vi kontaktar dig med bekräftelse inom 24 timmar.</p>
 
-            <button type="submit">Boka provpass</button>
+        <form id="bookingForm">
+
+            <label>Namn *</label>
+            <input type="text" id="name">
+            <span class="error" id="nameError"></span>
+
+            <label>E-post *</label>
+            <input type="email" id="email">
+            <span class="error" id="emailError"></span>
+
+            <label>Telefonnummer *</label>
+            <input type="tel" id="phone">
+            <span class="error" id="phoneError"></span>
+
+            <label>Berätta om dina mål och när du önskar provträna:</label>
+            <textarea id="message"></textarea>
+
+            <button type="submit" class="btn-primary">Boka nu</button>
+
+            <p id="successMessage" class="success"></p>
+
         </form>
+
     </section>
+
 </main>
 
-<footer>
-    <p>© 2026 GetRunning – Göteborg</p>
+<footer id="kontakt" class="footer">
+    <h3>Kontaktuppgifter</h3>
+    <p><strong>Adress:</strong> Göteborgsvägen 1, Göteborg</p>
+    <p><strong>Telefonnummer:</strong> 070 123 45 67</p>
+    <p><strong>Mejladress:</strong> Info@GetRunning.se</p>
+    <p class="copyright">© 2026 GetRunning – Göteborg</p>
 </footer>
+
+<script src="js/form-validation.js"></script>
 
 </body>
 </html>

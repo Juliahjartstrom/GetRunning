@@ -6,43 +6,119 @@
     <title>Träningspass | GetRunning</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>GetRunning</h1>
-    <nav>
-        <ul>
-            <li><a href="Startsida.html">Start</a></li>
-            <li><a href="Träningspass.html">Träningspass</a></li>
-            <li><a href="Instruktörer.html">Instruktörer</a></li>
-            <li><a href="Provpass.html">Boka provpass</a></li>
-        </ul>
+<header class="navbar">
+    <div class="logo">GetRunning</div>
+
+    <nav class="menu">
+        <a href="Startsida.html">Start</a>
+        <a href="Träningspass.html">Träningspass</a>
+        <a href="Instruktörer.html">Instruktörer</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="Provpass.html" class="btn-primary">Boka provträning</a>
     </nav>
 </header>
 
-<main>
-    <section>
-        <h2>Våra träningspass</h2>
 
-        <article>
-            <h3>Styrketräning</h3>
-            <p>För dig som vill bygga styrka och bli trygg i gymmet.</p>
-        </article>
+<main class="training-page">
 
-        <article>
-            <h3>Kondition</h3>
-            <p>Pass med fokus på uthållighet och kondition.</p>
-        </article>
+    <h1>Träningspass</h1>
 
-        <article>
-            <h3>Cirkelträning</h3>
-            <p>Variation och tempo i ett roligt gruppass.</p>
-        </article>
+    <div class="training-layout">
+
+        <!-- VÄNSTER SIDA – PASS -->
+        <div class="training-list">
+
+            <div class="training-card">
+                <h3>Zumba</h3>
+                <p>Zumba är ett dansbaserat träningspass med inspiration från latinamerikanska rytmer som kombinerar kondition och rörelseglädje.</p>
+            </div>
+
+            <div class="training-card">
+                <h3>Step 45</h3>
+                <p>Step 45 är ett koreograferat konditionspass där man använder en stepbräda för att träna ben och kondition. Träningen kombinerar rytm, koordination och pulshöjande rörelser.</p>
+            </div>
+
+            <div class="training-card">
+                <h3>CardioWalking</h3>
+                <p>Cardiowalking är en pulshöjande promenadträning där tempo och teknik används för att öka konditionen. Det är en skonsam men effektiv träningsform som passar alla nivåer.</p>
+            </div>
+
+            <div class="training-card">
+                <h3>Pilates</h3>
+                <p>Pilates fokuserar på stabilitet, hållning och kroppskontroll. Träningen stärker bålmuskulaturen och förbättrar rörlighet och balans.</p>
+            </div>
+
+            <div class="training-card">
+                <h3>BootyBurn</h3>
+                <p>Booty Burn fokuserar på att stärka och forma sätesmuskler och ben genom olika styrkeövningar. Passet förbättrar stabilitet, styrka och muskelkontakt i underkroppen.</p>
+            </div>
+
+            <div class="training-card">
+                <h3>CrossCage</h3>
+                <p>Cross Cage är en högintensiv funktionell träning som kombinerar styrka, kondition och explosiva övningar i stationer. Passet utmanar hela kroppen och förbättrar både styrka och uthållighet.</p>
+            </div>
+
+        </div>
+
+
+        <!-- HÖGER SIDA – KOMMANDE PASS -->
+        <aside class="schedule">
+
+            <h4>Kommande pass</h4>
+
+            <div class="schedule-card">
+                <p>Måndag kl 18:00<br>Platser kvar: 8</p>
+                <p>Onsdag kl 17:30<br>Platser kvar: 5</p>
+                <hr>
+                <p>Tisdag kl 17:00<br>Platser kvar: 15</p>
+                <p>Fredag kl 07:30<br>Platser kvar: 7 st i kö</p>
+                <hr>
+                <p>Onsdag kl 12:30<br>Platser kvar: 15</p>
+                <hr>
+                <p>Måndag kl 18:30<br>Platser kvar: 1 st i kö</p>
+                <p>Torsdag kl 12:30<br>Platser kvar: 13</p>
+                <hr>
+                <p>Onsdag kl 19:30<br>Platser kvar: 20 st i kö</p>
+                <p>Söndag kl 12:30<br>Platser kvar: 6</p>
+                <hr>
+                <p>Tisdag kl 17:00<br>Platser kvar: 10 st i kö</p>
+                <p>Söndag kl 12:30<br>Platser kvar: 2 st i kö</p>
+            </div>
+
+            <a href="Provpass.html" class="btn-outline schedule-btn">Boka träningspass</a>
+
+        </aside>
+
+    </div>
+
+
+    <!-- CTA SECTION -->
+    <section class="training-cta">
+
+        <div class="cta-text">
+            <h2>GetRunning – Boka våra gruppträningar idag!</h2>
+            <p>Gruppass är en effektiv träningsvariant eftersom de kombinerar struktur, motivation och variation i ett och samma pass. Att träna tillsammans med andra ökar motivationen och gör det lättare att hålla intensiteten uppe.</p>
+            <a href="Provpass.html" class="btn-primary">Boka provträning</a>
+        </div>
+
+        <div class="cta-icon">
+            <img src="https://cdn.discordapp.com/attachments/1326158668806488094/1473305511394017452/background-symbols-1.png?ex=6995ba2e&is=699468ae&hm=0679699098a00f72540b1c2f32f6c721ae8f87b1c850799af6abcb6d0b767478&" alt="Hantel ikon">
+        </div>
+
     </section>
+
 </main>
 
-<footer>
-    <p>© 2026 GetRunning – Göteborg</p>
+
+<footer id="kontakt" class="footer">
+    <h3>Kontaktuppgifter</h3>
+    <p><strong>Adress:</strong> Göteborgsvägen 1, Göteborg</p>
+    <p><strong>Telefonnummer:</strong> 070 123 45 67</p>
+    <p><strong>Mejladress:</strong> Info@GetRunning.se</p>
+    <p class="copyright">© 2026 GetRunning – Göteborg</p>
 </footer>
 
 </body>

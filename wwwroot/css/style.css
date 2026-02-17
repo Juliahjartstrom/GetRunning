@@ -1,0 +1,136 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GRUND */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f2ea;
+    color: #1e1e1e;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background-color: #e7dcca;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #1e1e1e;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #e5b96b;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+    width: 380px;
+    border-radius: 15px;
+}
+
+/* CONCEPT SECTION */
+.concept {
+    display: flex;
+    gap: 50px;
+    padding: 60px;
+}
+
+.concept-text {
+    width: 50%;
+}
+
+.concept-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.concept-text ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background-color: #e5b96b;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+    margin-right: 15px;
+}
+
+.btn-outline {
+    border: 2px solid #e5b96b;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+/* IKONER */
+.concept-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 20px;
+    align-content: start;
+}
+
+.concept-icons img {
+    width: 60px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 40px 60px;
+    margin-top: 60px;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+}

@@ -6,30 +6,90 @@
     <title>Startsida | GetRunning</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>GetRunning</h1>
-    <nav>
-        <ul>
-            <li><a href="Startsida.html">Start</a></li>
-            <li><a href="Träningspass.html">Träningspass</a></li>
-            <li><a href="Instruktörer.html">Instruktörer</a></li>
-            <li><a href="Provpass.html">Boka provpass</a></li>
-        </ul>
+<header class="navbar">
+    <div class="logo">GetRunning</div>
+
+    <nav class="menu">
+        <a href="Startsida.html">Start</a>
+        <a href="Träningspass.html">Träningspass</a>
+        <a href="Instruktörer.html">Instruktörer</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="Provpass.html" class="btn-primary">Boka provträning</a>
     </nav>
 </header>
 
 <main>
-    <section>
-        <h2>Välkommen till GetRunning</h2>
-        <p>Kom igång med träning på ett tryggt och enkelt sätt i Göteborg.</p>
-        <p>Testa ett gratis provpass innan du bestämmer dig för medlemskap.</p>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Kom igång med träningen med GetRunning från 299 kr/mån</h1>
+
+            <p>
+                Välkommen till hela Sveriges träningsklubb – med gratis provträning.
+                Välj mellan gruppträning, fri träning eller cirkelträning tillsammans
+                med våra engagerade instruktörer.
+            </p>
+
+            <a href="Provpass.html" class="btn-primary">Boka provträning</a>
+        </div>
+
+        <div class="hero-image">
+            <!-- Lägg in er huvudbild här -->
+            <img src="images/hero.jpg" alt="Person som tränar med hantel">
+        </div>
     </section>
+
+
+    <!-- KONCEPT / FÖRDELAR -->
+    <section class="concept">
+        <div class="concept-text">
+            <h2>GetRunning – Ditt första steg mot en starkare vardag</h2>
+
+            <p>
+                GetRunning är vårt koncept för dig som vill börja träna –
+                utan press, utan krav och utan tidigare erfarenhet.
+            </p>
+
+            <p>
+                Här får du möjlighet att testa olika träningsformer i lugn takt
+                tillsammans med våra instruktörer.
+            </p>
+
+            <ul>
+                <li>Grundläggande styrka och kondition</li>
+                <li>Trygg introduktion till gymmet</li>
+                <li>Små grupper och personlig känsla</li>
+                <li>Stöttande och inkluderande miljö</li>
+            </ul>
+
+            <div class="button-group">
+                <a href="Träningspass.html" class="btn-secondary">Om våra träningspass</a>
+                <a href="Provpass.html" class="btn-outline">Boka provträning</a>
+            </div>
+        </div>
+
+        <div class="concept-icons">
+            <!-- Ikoner placeras här -->
+            <img src="images/icon1.png" alt="">
+            <img src="images/icon2.png" alt="">
+            <img src="images/icon3.png" alt="">
+            <img src="images/icon4.png" alt="">
+            <img src="images/icon5.png" alt="">
+            <img src="images/icon6.png" alt="">
+        </div>
+    </section>
+
 </main>
 
-<footer>
-    <p>© 2026 GetRunning – Göteborg</p>
+<footer id="kontakt" class="footer">
+    <h3>Kontaktuppgifter</h3>
+    <p>Adress: Göteborgsvägen 1, Göteborg</p>
+    <p>Telefonnummer: 070 123 45 67</p>
+    <p>Mejladress: info@GetRunning.se</p>
 </footer>
 
 </body>

@@ -32,22 +32,23 @@
         <h2>Intresseanmälan</h2>
         <p>Vi kontaktar dig med bekräftelse inom 24 timmar.</p>
 
-        <form id="bookingForm">
+       <form id="bookingForm" method="post" action="/boka">
+
 
             <label>Namn *</label>
-            <input type="text" id="name">
+            <input type="text" id="name" name="name" required>
             <span class="error" id="nameError"></span>
 
             <label>E-post *</label>
-            <input type="email" id="email">
+            <input type="email" id="email" name="email" required>
             <span class="error" id="emailError"></span>
 
             <label>Telefonnummer *</label>
-            <input type="tel" id="phone">
+            <input type="tel" id="phone" name="phone" required>
             <span class="error" id="phoneError"></span>
 
             <label>Berätta om dina mål och när du önskar provträna:</label>
-            <textarea id="message"></textarea>
+            <textarea id="message" name="message"></textarea>
 
             <button type="submit" class="btn-primary">Boka nu</button>
 
@@ -67,7 +68,7 @@
     <p class="copyright">© 2026 GetRunning – Göteborg</p>
 </footer>
 
-<script src="js/form-validation.js"></script>
+<script src="JavaScript/formulär.js"></script>
 
 </body>
 </html>

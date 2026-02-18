@@ -1,7 +1,5 @@
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
 
-    event.preventDefault();
-
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
     let phone = document.getElementById("phone").value.trim();
@@ -9,12 +7,10 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     let nameError = document.getElementById("nameError");
     let emailError = document.getElementById("emailError");
     let phoneError = document.getElementById("phoneError");
-    let successMessage = document.getElementById("successMessage");
 
     nameError.textContent = "";
     emailError.textContent = "";
     phoneError.textContent = "";
-    successMessage.textContent = "";
 
     let isValid = true;
 
@@ -36,9 +32,8 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
         isValid = false;
     }
 
-    if (isValid) {
-        successMessage.textContent = "Tack! Din bokning har skickats. Vi återkommer inom 24 timmar.";
-        document.getElementById("bookingForm").reset();
+    if (!isValid) {
+        event.preventDefault(); // STOPPA bara om fel finns
     }
 
 });

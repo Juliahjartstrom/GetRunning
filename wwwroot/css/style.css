@@ -177,7 +177,7 @@ main .btn-primary,
 main .btn-secondary,
 main .btn-outline {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 10px;
     font-weight: 600;
 }
 
@@ -572,6 +572,31 @@ h3 {
     .instructor-cta {
         margin-top: 80px;
         padding-top: 40px;
+    }
+
+    .training-page .schedule-btn {
+        display: block;
+        margin: 20px auto 0 auto;
+        width: 85%;
+        text-align: center;
+    }
+
+    /* Stapla knappar i concept på mobil */
+    .concept .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .concept .button-group a {
+        margin-top: 0;
+        width: 85%;
+        max-width: 320px;
+    }
+
+    .concept .button-group .btn-secondary {
+        margin-right: 0;
     }
 
 }

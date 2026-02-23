@@ -1,8 +1,8 @@
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let phone = document.getElementById("phone").value.trim();
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let phone = document.getElementById("phone");
 
     let nameError = document.getElementById("nameError");
     let emailError = document.getElementById("emailError");
@@ -12,28 +12,36 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     emailError.textContent = "";
     phoneError.textContent = "";
 
+    name.classList.remove("input-error");
+    email.classList.remove("input-error");
+    phone.classList.remove("input-error");
+
     let isValid = true;
 
-    if (name === "") {
-        nameError.textContent = "Namn är obligatoriskt.";
+    if (name.value.trim() === "") {
+        nameError.textContent = "Vänligen fyll i ditt namn.";
+        name.classList.add("input-error");
         isValid = false;
     }
 
-    if (email === "") {
-        emailError.textContent = "E-post är obligatoriskt.";
+    if (email.value.trim() === "") {
+        emailError.textContent = "Vänligen fyll i din e-postadress.";
+        email.classList.add("input-error");
         isValid = false;
-    } else if (!email.includes("@")) {
+    } else if (!email.value.includes("@")) {
         emailError.textContent = "Ogiltig e-postadress.";
+        email.classList.add("input-error");
         isValid = false;
     }
 
-    if (phone === "") {
-        phoneError.textContent = "Telefonnummer är obligatoriskt.";
+    if (phone.value.trim() === "") {
+        phoneError.textContent = "Vänligen fyll i ditt telefonnummer.";
+        phone.classList.add("input-error");
         isValid = false;
     }
 
     if (!isValid) {
-        event.preventDefault(); // STOPPA bara om fel finns
+        event.preventDefault();
     }
 
 });

@@ -10,13 +10,17 @@
 
 <header class="navbar">
     <a href="Startsida.html" class="logo">GetRunning</a>
-    
+
+    <button class="hamburger" id="hamburger">
+    ☰
+    </button>
+
     <nav class="menu">
-        <a href="Startsida.html">Start</a>
+        <a href="Startsida.html">Startsida</a>
         <a href="Träningspass.html">Träningspass</a>
         <a href="Instruktörer.html">Instruktörer</a>
         <a href="#kontakt">Kontakt</a>
-        <a href="Provpass.html" class="btn-primary">Boka provträning</a>
+        <a href="Provpass.html" class="btn-primary active-page">Boka provträning</a>
     </nav>
 </header>
 
@@ -33,7 +37,7 @@
         <h2>Intresseanmälan</h2>
         <p>Vi kontaktar dig med bekräftelse inom 24 timmar.</p>
 
-       <form id="bookingForm" method="post" action="/boka">
+       <form id="bookingForm" method="post" action="/boka" novalidate>
 
 
             <label>Namn *</label>
@@ -70,6 +74,7 @@
 </footer>
 
 <script src="JavaScript/formulär.js"></script>
+<script src="JavaScript/navbar.js"></script>
 
 </body>
 </html>

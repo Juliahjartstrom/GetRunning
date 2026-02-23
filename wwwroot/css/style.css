@@ -63,13 +63,22 @@ body {
     font-weight: 500;
 }
 
+/* AKTIV MENYLÄNK */
+.menu a.active {
+    font-weight: 700;
+}
+
+.menu a.active:not(.btn-primary) {
+    font-weight: 700;
+}
+
 .menu a.btn-primary {
     font-weight: 600;
 }
 
 .btn-primary {
     background-color: #e5b96b;
-    padding: 10px 22px;
+    padding: 14px 22px;
     border-radius: 25px;
     text-decoration: none;
     color: black;
@@ -108,8 +117,13 @@ body {
     padding: 80px 20px;
 }
 
+.hero h1 {
+    margin-top: 90px;
+}
+
 .hero-text {
     width: 55%;
+    margin-top: 10px;
 }
 
 .hero-image {
@@ -247,8 +261,8 @@ h3 {
 .section-divider {
     border: none;
     border-top: 1px solid #ddd;
-    margin: 140px 10% 0 10%;   /* vänster/höger indrag */
-    padding-top: 80px;         /* luft mellan linjen och nästa sektion */
+    margin: 90px 10% 0 10%;   /* vänster/höger indrag */
+    padding-top: 60px;         /* luft mellan linjen och nästa sektion */
 }
 
 
@@ -383,7 +397,17 @@ h3 {
     resize: none;
 }
 
- 
+.booking-card .error {
+    color: #c0392b;
+    font-size: 14px;
+    display: block;
+    margin-top: 4px;
+}
+
+.input-error {
+    border: 2px solid #c0392b;
+    background-color: #ffeaea;
+}
 
 /* ==================================================
    FOOTER (GEMENSAM)
@@ -410,63 +434,144 @@ h3 {
     opacity: 0.7;
 }
 
+/* HAMBURGER */
+
+.hamburger {
+    display: none;
+}
 
 /* ==================================================
-    MOBILVERSION
+   MOBILVERSION
 ================================================== */
 
 @media (max-width: 768px) {
 
-    /* layout staplas */
+    /* ===== ALLMÄN LAYOUT ===== */
+
     .hero,
     .concept,
-    .training-layout,
     .instructor-cta,
-    .training-cta {
+    .training-cta,
+    .training-row {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
     }
 
-    /* text full bredd */
+    /* ===== BILDER SKA LIGGA ÖVER TEXT ===== */
+
+    .hero-image,
+    .concept-image,
+    .instructor-cta .cta-icon,
+    .training-cta .cta-icon {
+        order: -1;
+        justify-content: center;
+    }
+
+    /* ===== FULL BREDD PÅ TEXT ===== */
+
     .hero-text,
     .concept-text,
     .instructor-cta .cta-text,
-    .training-cta .cta-text {
+    .training-cta .cta-text,
+    .training-info,
+    .training-times {
         width: 100%;
+        border: none;
+        padding: 0;
     }
 
-    /* bilder anpassas */
+    /* ===== BILDER ANPASSAS ===== */
+
     .hero-image img,
+    .concept-image img,
     .instructor-cta .cta-icon img,
     .training-cta .cta-icon img {
         width: 100%;
         max-width: 350px;
-        margin-top: 30px;
+        margin: 0 auto 20px auto;
     }
 
-    /* mindre padding */
+    /* ===== INSTRUKTÖRER GRID → 1 KOLUMN ===== */
+
+    .instructors-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* ===== MINDRE PADDING ===== */
+
     .hero,
     .concept,
     .training-page,
-    .booking-page {
+    .booking-page,
+    .instructors-page {
         padding: 50px 20px;
     }
 
-    /* navbar staplas */
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+/* ===== NAVBAR (MOBIL) ===== */
+
+.navbar {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Visa hamburger */
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 45px;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+/* Dropdown-meny */
+.menu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 220px;
+    text-align: left;
+}
+
+/* När aktiv */
+.menu.active {
+    display: flex;
+}
+
+.menu a {
+    margin: 0;
+}
+
+    /* ===== FORMULÄR ===== */
+
+    .booking-card {
+        padding: 25px;
     }
 
-    .menu {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    .booking-card input,
+    .booking-card textarea {
+        font-size: 16px;
     }
 
-    .menu a {
-        margin-left: 0;
+    /* ===== CTA-SEKTIONER ===== */
+
+    .training-cta,
+    .instructor-cta {
+        margin-top: 80px;
+        padding-top: 40px;
     }
 
 }

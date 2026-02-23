@@ -1,4 +1,13 @@
 /* ==================================================
+   GLOBAL
+================================================== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==================================================
    RESET
 ================================================== */
 
@@ -24,16 +33,27 @@ body {
 ================================================== */
 
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 10%;
     background-color: #e7dcca;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
     font-size: 30px;   /* STÖRRE */
     font-weight: bold;
+}
+
+.logo {
+    text-decoration: none;
+    color: inherit;
 }
 
 .menu a {
@@ -43,13 +63,16 @@ body {
     font-weight: 500;
 }
 
+.menu a.btn-primary {
+    font-weight: 600;
+}
+
 .btn-primary {
     background-color: #e5b96b;
     padding: 10px 22px;
     border-radius: 25px;
     text-decoration: none;
     color: black;
-    font-weight: 600;
     transition: 0.2s ease;
 }
 
@@ -82,17 +105,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 10%;
+    padding: 80px 20px;
 }
 
 .hero-text {
-    width: 50%;
+    width: 55%;
 }
 
-.hero-text h1 {
-    font-size: 34px;
-    margin-bottom: 20px;
+.hero-image {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
 }
+
 
 .hero-text p {
     margin-bottom: 20px;
@@ -111,17 +136,19 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 60px;
-    padding: 80px 10%;
+    padding: 80px 20px;
 }
 
 .concept-text {
-    width: 50%;
+    width: 55%;
 }
 
-.concept-text h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+.concept-image {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
 }
+
 
 .concept-text ul {
     margin: 20px 0;
@@ -130,6 +157,14 @@ body {
 
 .button-group {
     margin-top: 20px;
+}
+
+main .btn-primary,
+main .btn-secondary,
+main .btn-outline {
+    display: inline-block;
+    margin-top: 30px;
+    font-weight: 600;
 }
 
 .concept-icons {
@@ -142,12 +177,28 @@ body {
     width: 60px;
 }
 
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
 /* ==================================================
    INSTRUKTÖRER
 ================================================== */
 
 .instructors-page {
-    padding: 80px 10%;
+    padding: 80px 20px;
 }
 
 .instructors-page h1 {
@@ -188,10 +239,18 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 140px;
-    padding-top: 80px;
-    border-top: 1px solid #ddd;
 }
+
+
+/* GEMENSAM SEKTIONSDELARE */
+
+.section-divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 140px 10% 0 10%;   /* vänster/höger indrag */
+    padding-top: 80px;         /* luft mellan linjen och nästa sektion */
+}
+
 
 .instructor-cta .cta-text {
     width: 55%;
@@ -200,7 +259,7 @@ body {
 .instructor-cta .cta-icon {
     width: 45%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .instructor-cta .cta-icon img {
@@ -213,42 +272,51 @@ body {
 ================================================== */
 
 .training-page {
-    padding: 80px 10%;
+    padding: 80px 20px;
 }
 
 .training-layout {
-    display: flex;
-    gap: 60px;
+    margin-top: 30px;
 }
 
-.training-list {
+.training-row {
+    background: #f5f3f0;
+    border-radius: 14px;
+    border: 1px solid #e0ddd8;
+    padding: 25px;
+    margin-bottom: 30px;
+
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.training-info {
     flex: 2;
 }
 
-.training-card {
-    background: #f5f3f0;
-    border-radius: 14px;
-    padding: 25px;
-    margin-bottom: 30px;
-    border: 1px solid #e0ddd8;
-}
-
-.schedule {
+.training-times {
     flex: 1;
+    border-left: 1px solid #ddd;
+    padding-left: 25px;
 }
 
-.schedule-card {
-    background: #f5f3f0;
-    padding: 25px;
-    border-radius: 14px;
-    border: 1px solid #e0ddd8;
+/* rubrik i tider-kolumnen (h4) */
+.training-times h4 {
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
 
-.schedule-card p {
+/* tiderna */
+.training-times p {
     margin-bottom: 15px;
     font-size: 14px;
 }
 
+.schedule-btn {
+    display: inline-block;
+    margin-top: 10px; /* eller 30px om du vill mer luft */
+}
 /* CTA TRÄNINGSPASS – BILD SKA LIGGA BREVID */
 
 .training-cta {
@@ -267,7 +335,7 @@ body {
 .training-cta .cta-icon {
     width: 45%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .training-cta .cta-icon img {
@@ -306,7 +374,7 @@ body {
     padding: 12px;
     border-radius: 10px;
     border: none;
-    background-color: #e5d2b5;
+    background-color: #f7f2ea;
     font-size: 14px;
 }
 
@@ -314,6 +382,8 @@ body {
     height: 100px;
     resize: none;
 }
+
+ 
 
 /* ==================================================
    FOOTER (GEMENSAM)
@@ -341,3 +411,62 @@ body {
 }
 
 
+/* ==================================================
+    MOBILVERSION
+================================================== */
+
+@media (max-width: 768px) {
+
+    /* layout staplas */
+    .hero,
+    .concept,
+    .training-layout,
+    .instructor-cta,
+    .training-cta {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* text full bredd */
+    .hero-text,
+    .concept-text,
+    .instructor-cta .cta-text,
+    .training-cta .cta-text {
+        width: 100%;
+    }
+
+    /* bilder anpassas */
+    .hero-image img,
+    .instructor-cta .cta-icon img,
+    .training-cta .cta-icon img {
+        width: 100%;
+        max-width: 350px;
+        margin-top: 30px;
+    }
+
+    /* mindre padding */
+    .hero,
+    .concept,
+    .training-page,
+    .booking-page {
+        padding: 50px 20px;
+    }
+
+    /* navbar staplas */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu a {
+        margin-left: 0;
+    }
+
+}

@@ -1,3 +1,4 @@
+using System.Linq;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
@@ -16,9 +17,9 @@ app.MapPost("/boka", async (HttpContext context) =>
 
     // SERVER-SIDE VALIDATION
     if (string.IsNullOrWhiteSpace(name) ||
-        string.IsNullOrWhiteSpace(email) ||
-        string.IsNullOrWhiteSpace(phone))
-    {
+    string.IsNullOrWhiteSpace(email) ||
+    string.IsNullOrWhiteSpace(phone) ||
+    !phone.All(char.IsDigit)){
         return Results.Content($@"
 <!DOCTYPE html>
 <html lang='sv'>

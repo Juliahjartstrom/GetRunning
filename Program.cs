@@ -1,12 +1,16 @@
 using System.Linq;
+
+// Builder skapas
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
+// Statiska filer kan användas genom detta (HTML, CSS, JS)
 app.UseStaticFiles();
 
+// Formulär skickas hit (POST-request)
 app.MapPost("/boka", async (HttpContext context) =>
 {
-    var form = await context.Request.ReadFormAsync();
+    var form = await context.Request.ReadFormAsync(); // Läser formulärdata
 
     string name = form["name"];
     string email = form["email"];
@@ -15,11 +19,13 @@ app.MapPost("/boka", async (HttpContext context) =>
 
     string cssUrl = $"{context.Request.Scheme}://{context.Request.Host}/css/style.css";
 
-    // SERVER-SIDE VALIDATION
+    // Kontrollerar input (Server-side validation)
     if (string.IsNullOrWhiteSpace(name) ||
     string.IsNullOrWhiteSpace(email) ||
     string.IsNullOrWhiteSpace(phone) ||
     !phone.All(char.IsDigit)){
+                
+        // Returnerar felsida om något är fel
         return Results.Content($@"
 <!DOCTYPE html>
 <html lang='sv'>
@@ -43,7 +49,7 @@ app.MapPost("/boka", async (HttpContext context) =>
 ", "text/html; charset=utf-8");
     }
 
-    // SUCCESS RESPONSE
+    // Om allt stämmer: Success response
     return Results.Content($@"
 <!DOCTYPE html>
 <html lang='sv'>
@@ -74,4 +80,5 @@ app.MapPost("/boka", async (HttpContext context) =>
 ", "text/html; charset=utf-8");
 });
 
+// Startar webbservern
 app.Run();

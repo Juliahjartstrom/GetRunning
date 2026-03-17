@@ -1,5 +1,7 @@
+// Detta körs när provträningsformuläret skickas in
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
 
+    // Inputfält och felmeddelanden
     let name = document.getElementById("name");
     let email = document.getElementById("email");
     let phone = document.getElementById("phone");
@@ -16,8 +18,10 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     email.classList.remove("input-error");
     phone.classList.remove("input-error");
 
+    // Kollar om formuläret är giltigt
     let isValid = true;
 
+    // Kontrollerar namn, epost och mobilnummer
     if (name.value.trim() === "") {
         nameError.textContent = "Vänligen fyll i ditt namn.";
         name.classList.add("input-error");
@@ -40,6 +44,7 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
         isValid = false;
     }
 
+    // Stoppar formuläret om någon input är felaktig
     if (!isValid) {
         event.preventDefault();
     }

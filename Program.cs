@@ -80,5 +80,8 @@ app.MapPost("/boka", async (HttpContext context) =>
 ", "text/html; charset=utf-8");
 });
 
+// Redirect från "/" till Startsida.html
+app.MapGet("/", () => Results.Redirect("/Startsida.html"));
+
 // Startar webbservern
 app.Run();
